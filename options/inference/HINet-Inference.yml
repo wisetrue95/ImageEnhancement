@@ -1,0 +1,49 @@
+# ------------------------------------------------------------------------
+# Copyright (c) 2021 megvii-model. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from BasicSR (https://github.com/xinntao/BasicSR)
+# Copyright 2018-2020 BasicSR Authors
+# ------------------------------------------------------------------------
+# general settings
+name: inference
+model_type: ImageRestorationModel
+scale: 1
+num_gpu: 2 # set num_gpu: 0 for cpu mode
+manual_seed: 37127
+
+datasets:
+
+  test:
+    name: DACON
+    type: SingleImageDataset
+
+    dataroot_lq: [~~~test_data_path~~~]/test_input_img/
+
+    io_backend:
+      type: disk
+
+img_path:
+  output_img: [~~~root_path~~~]/results/submission_0808/
+
+# network structures
+network_g:
+  type: HINet
+  wf: 32
+  hin_position_left: 0
+  hin_position_right: 4
+
+# path
+path:
+  pretrain_network_g: [~~~root_path~~~]/weights/HINet-136k.pth
+  strict_load_g: true
+  resume_state: ~
+
+# validation settings
+val:
+  grids: true
+  crop_size: 512
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500
