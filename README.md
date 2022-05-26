@@ -1,10 +1,10 @@
-# CameraImageEnhancement
-
+# ImageEnhancement
 DACON - Camera Image Quality Enhancement AI Contest
 
 https://dacon.io/competitions/official/235746/overview/description
 
 This project is based on megvii-model's [HINet implementation](https://github.com/megvii-model/HINet).
+
 
 ## Installation
 ```
