@@ -53,6 +53,14 @@ python scripts/preprocessing.py
 ### Weight path
 **`weights/HINet-136k.pth`**
 
+## Result
+![result1](result1.png)
+
+![result2](result2.png)
+
+
+
+
 
 
 
