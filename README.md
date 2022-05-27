@@ -1,5 +1,5 @@
 # ImageEnhancement
-Camera Image Quality Enhancement AI Contest ranked #7 - [DACON](https://dacon.io/competitions/official/235746/overview/description)
+Camera Image Quality Enhancement AI Contest - [DACON Ranked #7](https://dacon.io/competitions/official/235746/overview/description)
 
 This project is based on megvii-model's [HINet implementation](https://github.com/megvii-model/HINet).
 
